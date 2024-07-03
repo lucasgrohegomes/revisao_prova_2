@@ -9,7 +9,7 @@ export default function BuscarCep(){
             const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
             const data = await response.json()
             setEndereco(data)
-        } catch (error){
+        } catch(error){
             console.log(error)
         }
     }
@@ -17,14 +17,13 @@ export default function BuscarCep(){
     return(
         <div className="content">
             <h1>Buscar endereço por CEP</h1>
-            <input
-                type="text"
-                value={cep}
-                placeholder="Digite aqui"
-                onChange={(e) => setCep(e.target.value)}
-            ></input>
+            <input type="text" 
+            value={cep}
+            placeholder="Digite aqui"
+            onChange={(e) => setCep(e.target.value)}
+            />
 
-            <button onClick={fetchEndereco}>Buscar</button>
+            <button onClick={fetchEndereco} className="search-button">Buscar</button>
 
             {endereco && (
                 <div className="endereco">
