@@ -14,7 +14,7 @@ body{
     text-align: center;
     padding-left: 100px;
     padding-right: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 120px;
     margin-top: 70px;
     margin-left: 100px;
     margin-right: 100px;
@@ -31,17 +31,26 @@ body{
 }
 
 .search-button{
-    font-size: 30px
+    font-size: 30px;
+    background-color: white;
+    border: 0px;
+    margin:10px;
 }
 
 .search-button:hover{
-    opacity: 40%;
+    text-decoration: underline;
 }
 
 .endereco{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
     margin-top: 30px;
     margin-bottom: -70px;
     font-size: 30px
+}
+
+.endereco p{
+    margin: 20px;
 }
 
 @media screen and (max-width: 480px){
@@ -68,6 +77,7 @@ body{
         font-size: 20px
     }
     .endereco{
+        display: block;
         margin-top: 10px;
         margin-bottom: 0px;
         font-size: 20px
